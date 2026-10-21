@@ -1,0 +1,13 @@
+# never commit footage, renders or keys
+.env
+*.json.bak
+raw/
+lite/
+segs/
+*.mp4
+*.mov
+*.MOV
+*.wav
+*.mp3
+*.jpg
+__pycache__/
