@@ -1,4 +1,4 @@
-# NIO Edits
+# NIO Editing
 
 A skill for AI agents: turns raw phone footage into a short vertical reel in NIO's style — only the
 strongest action, a hook-and-return story, cuts that enter late on the action, live sound, optional
@@ -12,17 +12,17 @@ cut-to-the-beat music.
 
 Скажи своему агенту:
 
-> Установи скилл монтажа из https://github.com/nefedkin083/nio-edits
+> Установи скилл монтажа из https://github.com/nefedkin083/nio-editing
 
-Агент клонирует репозиторий в свою папку скиллов (например, `.claude/skills/nio-edits`),
+Агент клонирует репозиторий в свою папку скиллов (например, `.claude/skills/nio-editing`),
 ставит зависимости и попросит ключи. Перед каждым монтажом скилл сам подтягивает последнюю версию,
 обновления приходят автоматически.
 
 Вручную:
 
 ```bash
-git clone https://github.com/nefedkin083/nio-edits ~/.claude/skills/nio-edits
-pip install --user -r ~/.claude/skills/nio-edits/requirements.txt
+git clone https://github.com/nefedkin083/nio-editing ~/.claude/skills/nio-editing
+pip install --user -r ~/.claude/skills/nio-editing/requirements.txt
 ```
 
 ## Что нужно

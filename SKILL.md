@@ -1,9 +1,9 @@
 ---
-name: nio-edits
+name: nio-editing
 description: Edit raw phone footage (a trip, an event, a day) into a short vertical reel in NIO's style — only the strongest action, a hook-and-return story frame, late cuts on the action, native sound, optional cut-to-the-beat music. Use when the user asks to edit / cut / montage a reel from a folder or a bunch of clips.
 ---
 
-# NIO Edits
+# NIO Editing
 
 A skill for cutting raw clips into a 30–60 s vertical reel that people watch to the end.
 Author: NIO (@nefedkin). The method below is the product; the scripts only do the heavy lifting.
