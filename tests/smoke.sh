@@ -32,4 +32,6 @@ python3 "$S/beat_edl.py" plan.json edl_m.json
 python3 "$S/render.py" edl_m.json cut.mp4 --tail 0
 python3 "$S/music_mix.py" cut.mp4 edl_m.json cut_music.mp4
 test -s cut_music.mp4
+python3 "$S/moments.py" && test -s moments.json && ls moments_0.jpg
+rm -rf lite && bash "$S/make_lite.sh" --fast && test -f lite/A.mp4 && test -f lite/B.mp4
 echo "SMOKE OK ($W)"

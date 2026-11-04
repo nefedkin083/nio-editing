@@ -39,10 +39,14 @@ Long tasks: first tell the user what you are doing and roughly how long it takes
 ## 3. Pipeline
 
 1. `bash S/make_lite.sh` — 480p proxies in `lite/` (vertical only; `--keep-horizontal` to keep landscape clips).
+   4K / long footage: `--fast` (keyframes only, ~1 frame/s) — seconds per clip instead of hours.
 2. `python3 S/audio_peaks.py` — loud moments per clip (impacts, revs, shouts) → hints.
 3. `python3 S/events.py` — every clip → events (falls, stuck, struggle, stunts, unusual, animals, reactions,
    strong reveals). Prints the top list. `EVENTS_MODEL=gemini-2.5-pro` for a pricier, sharper pass.
 4. `python3 S/beatlog.py 12` — second-by-second log (picture + sound + speech) of the 12 best clips.
+   `python3 S/moments.py` — scores every half-second of every clip (contrast, change, colour) and draws
+   contact sheets `moments_*.jpg` labelled `clip@t`. Look at them: this is the pool of the best pieces.
+   For visual footage (light shows, installations, objects) it matters more than events.py.
 5. **Write the script yourself** (section 4) as an EDL: `edl_v1.json` =
    `[{"video": "IMG_3240", "start": 21.6, "end": 22.6, "act": "ram hit 1"}, ...]`.
 6. **Trim every shot by eye** (section 5): `python3 S/strip.py CLIP A B 4 sheet.jpg` → look at the sheet,
@@ -67,6 +71,15 @@ Nothing after the payoff. No intro cards, no titles, no outro.
 
 **Mini-arcs inside.** Setup → effort → payoff in 2–4 shots: wheel in the mud → pushing → breaks free.
 A payoff without a setup does not land.
+
+**Best pieces, wherever they are.** Choose every shot by how good it looks on screen — the peak of
+a transformation, a flash, the moment of contact — and take it from wherever it sits in the file.
+The position in the file means nothing: do not default to the first seconds of a clip, do not avoid
+them either. Scan each clip over its whole length (`moments.py` + strips) before choosing.
+
+**Several tracks — several different cuts.** One cut per track, no shot repeated between them; give
+each its own palette/character that fits its music (slow track — slow transformations, dense trap —
+red, aggressive, people in frame, and so on).
 
 **Enter late.** A shot starts already in motion — on the swing, not on the man standing and getting ready.
 The action may run to its end; the beginning is cut. Find the exact frame by the loudness peak and the strip.
